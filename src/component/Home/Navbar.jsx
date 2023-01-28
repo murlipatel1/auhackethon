@@ -1,14 +1,18 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 export default function Navbar() {
+  const location = useLocation()
+  const currentPath = location.pathname
   return (
-    <nav className="w-full px-5 md:px-16 pt-3 text-white">
+    <nav className="w-full bg-primary px-5 pt-3 text-white md:px-16">
       <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between py-2">
         <div className="flex items-center pl-4">
-          <div className="flex items-center gap-3 text-2xl font-bold lg:text-4xl">
-            <img src="./images/logo.jpeg" className="w-10" alt="logo" />
-            <h1 className="text-black">StockHive</h1>
-          </div>
+          <Link to={"/"}>
+            <div className="flex items-center gap-3 text-2xl font-bold lg:text-4xl">
+              <img src="./images/logo.png" className="w-10" alt="logo" />
+              <h1 className="text-black">StockHive</h1>
+            </div>
+          </Link>
         </div>
         <div className="block pr-4 lg:hidden">
           <button
@@ -31,9 +35,11 @@ export default function Navbar() {
         >
           <ul className="list-reset flex-1 items-center justify-end lg:flex">
             <li className="mr-3">
-              <h2 className="inline-block cursor-pointer py-2 px-4 font-bold text-black no-underline">
-                Home
-              </h2>
+              <Link to={"/"}>
+                <h2 className="inline-block cursor-pointer py-2 px-4 text-black no-underline">
+                  Home
+                </h2>
+              </Link>
             </li>
             <li className="mr-3">
               <h2 className="hover:text-underline inline-block cursor-pointer py-2 px-4 text-black no-underline hover:text-gray-800">
@@ -46,11 +52,17 @@ export default function Navbar() {
               </h2>
             </li>
           </ul>
-          {/* <button className="focus:shadow-outline mx-auto mt-4 rounded-lg border-2 border-secondary px-8 pt-[6px] pb-2  font-bold text-greyShade hover:bg-secondary hover:text-white hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 ">
+          <Link
+            className={`focus:shadow-outline mx-auto mt-4 rounded-lg border-2 ${
+              currentPath === "/signup"
+                ? "bg-secondary text-white hover:bg-transparent hover:text-greyShade"
+                : "bg-transparent text-greyShade hover:bg-secondary hover:text-white"
+            }  border-secondary px-8 pt-[6px]  pb-2 font-bold  hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0`}
+            to="/signup"
+            role="button"
+          >
             SignUp
-          </button> */}
-          <Link className='focus:shadow-outline mx-auto mt-4 rounded-lg border-2 border-secondary px-8 pt-[6px] pb-2  font-bold text-greyShade hover:bg-secondary hover:text-white hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0' to='/signup' role='button'>SignUp</Link>
-
+          </Link>
         </div>
       </div>
     </nav>
