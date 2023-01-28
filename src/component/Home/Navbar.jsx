@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="flex items-center pl-4">
           <div className="flex items-center gap-3 text-2xl font-bold lg:text-4xl">
             <img src="./images/logo.jpeg" className="w-10" alt="logo" />
-            <h1 className="text-black">Stockhive</h1>
+            <h1 className="text-black">StockHive</h1>
           </div>
         </div>
         <div className="block pr-4 lg:hidden">

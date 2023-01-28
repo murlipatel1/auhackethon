@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SignUp2 = () => {
+const Login = () => {
     return (
         <>
             <section className="h-full gradient-form bg-gray-200 md:h-screen">
@@ -17,10 +17,10 @@ const SignUp2 = () => {
                                                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                                                     alt="logo"
                                                 />
-                                                <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The Lotus Team</h4>
+                                                <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The StockHive Team</h4>
                                             </div>
                                             <form>
-                                                <p className="mb-4">Please login to your account</p>
+                                                <p className="mb-4">Please Login to your account</p>
                                                 <div className="mb-4">
                                                     <input
                                                         type="text"
@@ -39,7 +39,7 @@ const SignUp2 = () => {
                                                 </div>
                                                 <div className="text-center pt-1 mb-12 pb-1">
                                                     <button
-                                                        className="inline-block px-6 py-2.5 text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:text-white hover:bg-secondary hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
+                                                        className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-secondary hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
                                                         type="button"
                                                         data-mdb-ripple="true"
                                                         data-mdb-ripple-color="light"
@@ -56,7 +56,7 @@ const SignUp2 = () => {
                                                         data-mdb-ripple="true"
                                                         data-mdb-ripple-color="light"
                                                     >
-                                                        Danger
+                                                        Sign Up
                                                     </button>
                                                 </div>
                                             </form>
@@ -86,4 +86,4 @@ const SignUp2 = () => {
     )
 }
 
-export default SignUp2
+export default Login
