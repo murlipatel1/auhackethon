@@ -1,4 +1,5 @@
 import React from "react"
+import BuyStocksCompo from "../../component/Dashboard/BuyStocksCompo"
 import SideBar from "../../component/SideBar"
 
 const BuyStocks = () => {
@@ -9,6 +10,7 @@ const BuyStocks = () => {
         <div className="mt-4 px-5">
           <div className="mt-5 ml-5">
             <h2 className="text-4xl font-medium ">Buy Stocks</h2>
+            <BuyStocksCompo />
           </div>
         </div>
       </div>
