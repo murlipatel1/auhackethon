@@ -5,6 +5,9 @@ import Overview from "./Pages/Dashboard/Overview"
 import BuyStocks from "./Pages/Dashboard/BuyStocks"
 import SellStocks from "./Pages/Dashboard/SellStocks"
 import Rebalancing from "./Pages/Dashboard/Rebalancing"
+import Login from "./Pages/Login"
+import SignUp from "./Pages/SignUp"
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
         <Route exact path="/buystock" element={<BuyStocks />} />
         <Route exact path="/sellstock" element={<SellStocks />} />
         <Route exact path="/rebalancing" element={<Rebalancing />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<SignUp />} />
       </Routes>
     </>
   )
