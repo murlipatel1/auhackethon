@@ -4,6 +4,7 @@ import Navbar from "../component/Home/Navbar"
 import Login from "./Login"
 import SignUp from "./SignUp"
 import {Route, Routes} from "react-router-dom"
+import Dashboard from "./Dashboard"
 
 export const HomePage = () => {
   return (
@@ -25,6 +26,7 @@ export const HomePage = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<SignUp />} />
       </Routes>
+      <Dashboard />
     </>
   )
 }
