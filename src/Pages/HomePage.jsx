@@ -26,7 +26,7 @@ export const HomePage = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<SignUp />} />
       </Routes>
-      <Dashboard />
+
     </>
   )
 }
