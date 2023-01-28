@@ -1,47 +1,88 @@
-import React from 'react'
+import {Icon} from "@iconify/react"
+import React from "react"
+import {Link, useNavigate} from "react-router-dom"
 
-const SideBar = () => {
+export default function SideBar(props) {
+  const navigate = useNavigate()
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("superAdminToken")
+//     navigate("/adminLogin")
+//   }
+
+  const sidebarItems = [
+    {
+      name: "Overview",
+      icon: "mdi:analytics",
+      link: "/overview",
+      active: "overview",
+    },
+    {
+      name: "Buy Stocks",
+      icon: "fluent:money-hand-24-filled",
+      link: "/buystock",
+      active: "buystock",
+    },
+    {
+      name: "Sell Stocks",
+      icon: "game-icons:sell-card",
+      link: "/sellstock",
+      active: "sellstock",
+    },
+    {
+      name: "Portfolio Rebalancing",
+      icon: "material-symbols:manage-accounts",
+      link: "/rebalancing",
+      active: "rebalancing",
+    },
+  ]
+
+  const sidebarItemsList = sidebarItems.map((item, index) => (
+    <div
+      key={index}
+      className={`flex items-center gap-3 p-3 ${
+        props.active === item.active ? "bg-[#f9780e23]" : null
+      } `}
+    >
+      <Icon icon={item.icon} color={"black"} className="text-3xl" />
+      <Link to={item.link}>
+        <h2 className="text-2xl font-medium">{item.name}</h2>
+      </Link>
+    </div>
+  ))
+
   return (
-    <>
-    <body className="bg-gray-100 font-sans leading-normal tracking-normal">
-      <div className="flex md:flex-row-reverse flex-wrap">
-		
-         <div className="w-full md:w-4/5 bg-gray-100">
-            <div className="container bg-gray-100 pt-16 px-6">
-               
+    <div
+      className={` xs:w-4/5 flex min-h-screen w-fit bg-primary px-4 sm:w-3/5 lg:w-full font-Roboto
+        `}
+    >
+      <div className="mt-5">
+        <div className="flex items-center justify-between ml-5">
+          <Link to="/">
+            <div className="flex items-center gap-3">
+              <img
+                src="../images/logo.png"
+                alt="Logo"
+                className="w-16"
+              />
+              <h1 className="text-3xl font-bold">
+                StockHive
+              </h1>
             </div>
-         </div>
-		 
-         <div className="w-full md:w-1/5 bg-gray-900 md:bg-gray-900 px-2 text-center fixed bottom-0 md:pt-8 md:top-0 md:left-0 h-16 md:h-screen md:border-r-4 md:border-gray-600">
-            <div className="md:relative mx-auto lg:float-right lg:px-6">
-               <ul className="list-reset flex flex-row md:flex-col text-center md:text-left">
-                  <li className="mr-3 flex-1">
-                     <a href="#" className="block py-1 md:py-3 pl-1 align-middle text-gray-800 no-underline hover:text-pink-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-pink-500">
-                     <i className="fas fa-link pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Link</span>
-                     </a>
-                  </li>
-                  <li className="mr-3 flex-1">
-                     <a href="#" className="block py-1 md:py-3 pl-1 align-middle text-gray-800 no-underline hover:text-pink-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-pink-500">
-                     <i className="fas fa-link pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Link</span>
-                     </a>
-                  </li>
-                  <li className="mr-3 flex-1">
-                     <a href="#" className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-pink-600">
-                     <i className="fas fa-link pr-0 md:pr-3 text-pink-500"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:font-bold block md:inline-block">Active Link</span>
-                     </a>
-                  </li>
-                  <li className="mr-3 flex-1">
-                     <a href="#" className="block py-1 md:py-3 pl-1 align-middle text-gray-800 no-underline hover:text-pink-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-pink-500">
-                     <i className="fas fa-link pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Link</span>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
+          </Link>
+        </div>
+
+        <div className="mt-8 space-y-4 px-3">{sidebarItemsList}</div>
+
+        <div className="mt-4 px-3">
+          <button
+            className="w-3/5 rounded bg-secondary px-5 py-1 text-2xl font-medium text-white lg:w-4/5"
+            // onClick={handleLogout}
+          >
+            Log Out
+          </button>
+        </div>
       </div>
-   </body>
-    </>
+    </div>
   )
 }
-
-export default SideBar

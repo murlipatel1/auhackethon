@@ -13,22 +13,22 @@ export const HomePage = () => {
       {/* <Login />
     <SignUp /> */}
 
-      <Routes>
+      {/* <Routes>
         <Route
           exact
           path="/"
-          element={
+          element={ */}
             <div className="overflow-hidden bg-primary font-Roboto">
               <Navbar />
               <Main />
               <About/>
               <News/>
             </div>
-          }
-        />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/signup" element={<SignUp />} />
-      </Routes>
+          {/* }
+        /> */}
+        {/* <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<SignUp />} /> */}
+      {/* </Routes> */}
     </>
   )
 }
