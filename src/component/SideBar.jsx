@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = () => {
+const Sidebar = () => {
   return (
     <>
     <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -44,4 +44,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Sidebar
