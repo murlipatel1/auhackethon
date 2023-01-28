@@ -1,7 +1,33 @@
-import React from "react"
+import React, { useState } from "react";
+import {useNavigate } from "react-router-dom";
 import Navbar from "../component/Home/Navbar"
 
+
 const SignUp = () => {
+  let history = useNavigate()
+  const host = "http://localhost:5000"
+  const [credentials, setCredentials] = useState({name:"", email: "", password: "",cpassword: "" });
+  const handleSubmit = async (e) => {
+    console.log("Clicked")
+    e.preventDefault();  
+    const response = await fetch(`${host}/api/auth/createuser`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({name: credentials.name, email: credentials.email , password: credentials.password }),
+    });
+    const json = await response.json()
+    console.log(json)
+    
+      // redirect
+      localStorage.setItem('token',json.authToken)
+      history("/login")
+  }
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <Navbar />
@@ -23,22 +49,30 @@ const SignUp = () => {
                           We are The StockHive Team
                         </h4>
                       </div>
-                      <form>
+                      <form onSubmit={handleSubmit}>
                         <p className="mb-4">Please SignUp to your account</p>
+                        
                         <div className="mb-4">
                           <input
                             type="text"
+                            name="name"
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
+                            value={credentials.name}
+                            onChange={onChange}
                             placeholder="Name"
+                            minLength={5}
                           />
                         </div>
                         <div className="mb-4">
                           <input
-                            type="text"
+                            type="email"
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
-                            placeholder="Username"
+                            name="email"
+                            value={credentials.email}
+                            onChange={onChange}
+                            placeholder="Email"
                           />
                         </div>
                         <div className="mb-4">
@@ -46,7 +80,11 @@ const SignUp = () => {
                             type="password"
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
+                            name="password"
+                            value={credentials.password}
+                            onChange={onChange}
                             placeholder="Password"
+                            minLength={5}
                           />
                         </div>
                         <div className="mb-4">
@@ -54,13 +92,17 @@ const SignUp = () => {
                             type="password"
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
+                            name="cpassword"
+                            value={credentials.cpassword}
+                            onChange={onChange}
                             placeholder="Confirm Password"
+                            minLength={5}
                           />
                         </div>
                         <div className="mb-12 pt-1 pb-1 text-center">
                           <button
                             className="mb-3 inline-block w-full rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:text-white hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-                            type="button"
+                            type={`${credentials.password}===${credentials.cpassword} ? 'submit' :'' `}
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
                           >
