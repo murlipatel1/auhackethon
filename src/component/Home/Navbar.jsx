@@ -42,13 +42,13 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="mr-3">
-              <h2 className="hover:text-underline inline-block cursor-pointer py-2 px-4 text-black no-underline hover:text-gray-800">
-                About
+              <h2  className="hover:text-underline inline-block cursor-pointer py-2 px-4 text-black no-underline hover:text-gray-800">
+                <a href="#abt">About</a>
               </h2>
             </li>
             <li className="mr-3">
               <h2 className="hover:text-underline inline-block cursor-pointer py-2 px-4 text-black no-underline hover:text-gray-800">
-                News
+               <a href="#news">News</a>
               </h2>
             </li>
           </ul>
