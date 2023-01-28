@@ -1,14 +1,13 @@
 
 import './App.css';
-import Navbar from './Pages/Navbar';
-import Login from './Pages/Login';
-import SignUp from './Pages/SignUp';
-import { HomePage } from './Pages/HomePage';
+import  {HomePage}  from './Pages/HomePage';
+import News from './Pages/News';
 
 function App() {
   return (
     <>
     <HomePage />
+
     </>
   );
 }
