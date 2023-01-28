@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from 'react-router-dom'
 export default function Main() {
   return (
       <div className="pt-8">
@@ -12,9 +12,10 @@ export default function Main() {
               Simplify and optimize your stock management with our user-friendly
               platform
             </p>
-            <button className="focus:shadow-outline mx-auto mt-4 rounded-lg bg-secondary px-8 pt-[6px] pb-2 font-bold  text-black hover:border-2 hover:border-secondary hover:bg-transparent hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 ">
+            {/* <button className="focus:shadow-outline mx-auto mt-4 rounded-lg bg-secondary px-8 pt-[6px] pb-2 font-bold  text-black hover:border-2 hover:border-secondary hover:bg-transparent hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 " onClick="">
               Login
-            </button>
+            </button> */}
+            <Link className='focus:shadow-outline mx-auto mt-4 rounded-lg bg-secondary px-8 pt-[6px] pb-2 font-bold  text-black hover:border-2 hover:border-secondary hover:bg-transparent hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 ' to='/login' role='button'>Login</Link>
           </div>
           <div className="w-full py-6 text-center md:w-3/5 md:flex md:justify-center">
             <img

@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from "react-router-dom"
 export default function Navbar() {
   return (
     <nav className="w-full px-5 md:px-16 pt-3 text-white">
@@ -46,9 +46,11 @@ export default function Navbar() {
               </h2>
             </li>
           </ul>
-          <button className="focus:shadow-outline mx-auto mt-4 rounded-lg border-2 border-secondary px-8 pt-[6px] pb-2  font-bold text-greyShade hover:bg-secondary hover:text-white hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 ">
+          {/* <button className="focus:shadow-outline mx-auto mt-4 rounded-lg border-2 border-secondary px-8 pt-[6px] pb-2  font-bold text-greyShade hover:bg-secondary hover:text-white hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0 ">
             SignUp
-          </button>
+          </button> */}
+          <Link className='focus:shadow-outline mx-auto mt-4 rounded-lg border-2 border-secondary px-8 pt-[6px] pb-2  font-bold text-greyShade hover:bg-secondary hover:text-white hover:duration-300 focus:outline-none lg:mx-0 lg:mt-0' to='/signup' role='button'>SignUp</Link>
+
         </div>
       </div>
     </nav>
