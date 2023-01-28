@@ -1,8 +1,37 @@
-import React from "react"
+import React, { useState } from "react";
+import {useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom"
 import Navbar from "../component/Home/Navbar"
 
 const Login = () => {
+  let navigate = useNavigate()
+  // const host = "http://localhost:5000"
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const handleSubmit = async (e) => {
+    console.log("Clicked")
+    e.preventDefault();  
+    // const response = await fetch(`${host}/api/auth/login`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({email: credentials.email , password: credentials.password }),
+    // });
+    // const json = await response.json()
+    // console.log(json)
+    // if(json.success){
+    // if(true){
+      //redirect
+      // localStorage.setItem('token',json.authToken)
+      navigate("/overview")
+    // }else{
+    //   alert("Invalid Type")
+    // }
+  }
+
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  };
   return (
     <>
       <Navbar />
@@ -24,7 +53,7 @@ const Login = () => {
                           We are The StockHive Team
                         </h4>
                       </div>
-                      <form>
+                      <form onSubmit={handleSubmit}>
                         <p className="mb-4">Please Login to your account</p>
                         <div className="mb-4">
                           <input
@@ -32,6 +61,9 @@ const Login = () => {
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
                             placeholder="Username"
+                            name="email"
+                            value={credentials.email}
+            onChange={onChange}
                           />
                         </div>
                         <div className="mb-4">
@@ -40,12 +72,15 @@ const Login = () => {
                             className="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                             id="exampleFormControlInput1"
                             placeholder="Password"
+                            name="password"
+                            value={credentials.password}
+            onChange={onChange}
                           />
                         </div>
                         <div className="mb-12 pt-1 pb-1 text-center">
                           <button
                             className="mb-3 inline-block w-full rounded px-6 py-2.5 text-xs font-bold uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-                            type="button"
+                            type="submit"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
                           >
@@ -59,13 +94,13 @@ const Login = () => {
                           <p className="mb-0 mr-2">Don't have an account?</p>
                           <Link to={"/signup"}>
                             <button
-                              type="button"
+                              type="submit"
                               className="inline-block rounded border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
                               data-mdb-ripple="true"
                               data-mdb-ripple-color="light"
                             >
                               Sign Up
-                            </button>
+                            </button> 
                           </Link>
                         </div>
                       </form>
