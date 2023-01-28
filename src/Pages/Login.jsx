@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 import Navbar from "../component/Home/Navbar"
 
 const Login = () => {
@@ -43,7 +44,7 @@ const Login = () => {
                         </div>
                         <div className="mb-12 pt-1 pb-1 text-center">
                           <button
-                            className="mb-3 inline-block w-full rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                            className="mb-3 inline-block w-full rounded px-6 py-2.5 text-xs font-medium font-bold uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
                             type="button"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
@@ -56,14 +57,16 @@ const Login = () => {
                         </div>
                         <div className="flex items-center justify-between pb-6">
                           <p className="mb-0 mr-2">Don't have an account?</p>
-                          <button
-                            type="button"
-                            className="inline-block rounded border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                          >
-                            Sign Up
-                          </button>
+                          <Link to={"/signup"}>
+                            <button
+                              type="button"
+                              className="inline-block rounded border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                              data-mdb-ripple="true"
+                              data-mdb-ripple-color="light"
+                            >
+                              Sign Up
+                            </button>
+                          </Link>
                         </div>
                       </form>
                     </div>
