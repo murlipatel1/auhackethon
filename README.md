@@ -1,6 +1,6 @@
 # StockHive
 
-Add image here
+![image](https://user-images.githubusercontent.com/87543808/215325529-16357dad-0425-46ad-bd9d-a891e78d46ee.png)
 
 ## Team Name: _ByteHogs_
 
@@ -35,8 +35,13 @@ MERN
 - **_Preet Sojitra_** (Socials: [GitHub](https://github.com/Preet-Sojitra), [Linkedin](https://www.linkedin.com/in/preet-sojitra/))
 
 ## ScreenShots
+![image](https://user-images.githubusercontent.com/87543808/215325608-45175ae3-31fe-4ac6-98ed-f52a296bfbb3.png)
+![image](https://user-images.githubusercontent.com/87543808/215325627-feeab518-b6b6-4408-accf-7d442808ab25.png)
+![image](https://user-images.githubusercontent.com/87543808/215325639-fdcc23e3-6724-406f-b78d-f6845474bc50.png)
+![image](https://user-images.githubusercontent.com/87543808/215325651-f620cd54-028f-4876-abf4-468b9e9c8f6a.png)
+![image](https://user-images.githubusercontent.com/87543808/215325673-1bd871db-a893-4abe-b187-12bbda21e799.png)
+![image](https://user-images.githubusercontent.com/87543808/215325687-e9f4798e-3c5f-4381-bd5a-a0dc949f87f5.png)
 
-To be added here
 
 ## Available Scripts
 
