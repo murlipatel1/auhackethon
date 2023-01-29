@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# StockHive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add image here
+
+## Team Name: _ByteHogs_
+
+## Problem Statement
+
+**_Category: FinTech_**
+
+A business is facing the challenge of effectively managing its stock portfolio in order to maximize profits while minimizing costs. This includes accurately forecasting demand for products, efficiently allocating resources to stock inventory, and effectively managing the supply chain to minimize disruptions and delays. Additionally, the business must constantly monitor and adjust their stock portfolio in response to changes in market conditions and consumer preferences.
+
+## Solution
+
+Therefore, we are here with a platform that can simplify and optimize your stock management with our user-friendly platform also we are providing automatica rebalancing of the user's portfolio based on pre-set criteria such as risk tolerance and investment goals. This could help users maintain a well-diversified portfolio and avoid over-concentration in a particular stock or sector.
+
+### Tech Stack
+
+MERN
+
+[**Backend Repo**](https://github.com/Abhinav5050649/stocksPortfolioHack)
+
+## Presentation
+
+To be attached here
+
+## Team Details
+
+**_ByteHogs_**
+
+- **_Murli Patel_** (Socials: [GitHub](https://github.com/murlipatel1), [Linkedin](https://www.linkedin.com/in/murli-patel-193605224/))
+- **_Priyank Vaidya_** (Socials: [GitHub](https://github.com/Priyank-Vaidya), [Linkedin](https://www.linkedin.com/in/priyank-vaidya/))
+- **_Parth Sood_** (Socials: [GitHub](https://github.com/psood708), [Linkedin](https://www.linkedin.com/in/parth-sood/))
+- **_Abhinav Sharma_** (Socials: [GitHub](https://github.com/Abhinav5050649), [Linkedin](https://www.linkedin.com/in/abhinavsharma29/))
+- **_Preet Sojitra_** (Socials: [GitHub](https://github.com/Preet-Sojitra), [Linkedin](https://www.linkedin.com/in/preet-sojitra/))
+
+## ScreenShots
+
+To be added here
 
 ## Available Scripts
 
@@ -14,11 +50,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -28,43 +59,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
