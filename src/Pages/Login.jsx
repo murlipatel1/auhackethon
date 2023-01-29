@@ -20,7 +20,7 @@ const Login = () => {
     const json = await response.json()
     console.log(json)
     if(json.success){
-    if(true){
+    
     // redirect
     localStorage.setItem('token',json.authToken)
     navigate("/overview")
@@ -130,7 +130,6 @@ const Login = () => {
       </section>
     </>
   )
-}
 }
 
 export default Login
