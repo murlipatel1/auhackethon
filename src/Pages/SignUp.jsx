@@ -106,7 +106,7 @@ const SignUp = () => {
                         <div className="mb-12 pt-1 pb-1 text-center">
                           <button
                             className="mb-3 inline-block w-full rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:text-white hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-                            type={`${credentials.password}===${credentials.cpassword} ? 'submit' :'' `}
+                            type='submit'
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
                           >
