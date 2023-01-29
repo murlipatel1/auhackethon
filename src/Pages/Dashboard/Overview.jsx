@@ -4,18 +4,18 @@ import OwnedStocks from "../../component/Dashboard/OwnedStocks"
 import axios from "axios"
 
 const Overview = () => {
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/get/getquote", {
-        company: "AAPL",
-      })
-      .then((res) => {
-        console.log(res.data)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [])
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:5000/api/get/getquote", {
+  //       company: "AAPL",
+  //     })
+  //     .then((res) => {
+  //       // console.log(res.data)
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // }, [])
 
   return (
     <div className="font-Roboto">

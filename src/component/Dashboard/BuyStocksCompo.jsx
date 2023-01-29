@@ -52,7 +52,26 @@ export default function BuyStocksCompo() {
   // console.log(stockData)
   // console.log(units)
 
-  const handleBuy = () => {}
+  const handleBuy = () => {
+    setOwnedStocks((prev) => [
+      ...prev,
+      {
+        name: selectedOptions.name,
+        units: units,
+        price: stockData["05. price"],
+        boughtPrice: (stockData["05. price"] * units).toFixed(2),
+      },
+    ])
+  }
+  useEffect(() => {
+    const prevOwnedStocks =
+      JSON.parse(localStorage.getItem("ownedStocks")) || []
+    localStorage.setItem(
+      "ownedStocks",
+      JSON.stringify([...prevOwnedStocks, ...ownedStocks])
+    )
+  }, [ownedStocks])
+  // console.log(ownedStocks)
 
   return (
     <div className="mt-8">

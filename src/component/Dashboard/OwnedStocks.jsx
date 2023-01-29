@@ -1,112 +1,118 @@
 import React from "react"
 
 export default function OwnedStocks() {
-  const ownedStocks = [
-    {
-      id: 1,
-      name: "aapl",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 2,
-      name: "amazon",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 3,
-      name: "google",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 4,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 5,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 6,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 7,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 8,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 9,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 10,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 11,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 12,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-    {
-      id: 13,
-      name: "facebook",
-      units: 15,
-      currentPrice: 10000,
-      net: 2500,
-      boughtAt: 500,
-    },
-  ]
+  // const ownedStocks = [
+  //   {
+  //     id: 1,
+  //     name: "aapl",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "amazon",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "google",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 7,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 8,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 9,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 10,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 11,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 12,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  //   {
+  //     id: 13,
+  //     name: "facebook",
+  //     units: 15,
+  //     currentPrice: 10000,
+  //     net: 2500,
+  //     boughtAt: 500,
+  //   },
+  // ]
+
+  const ownedStocks = localStorage.getItem("ownedStocks")
+    ? JSON.parse(localStorage.getItem("ownedStocks"))
+    : []
+
+  console.log(ownedStocks)
 
   const ownedStocksList = ownedStocks.map((stock, index) => (
     <div
@@ -118,17 +124,17 @@ export default function OwnedStocks() {
         <div>
           <h1 className="text-2xl font-medium uppercase">{stock.name}</h1>
           <h3>
-            Bought at: <span>{stock.boughtAt}</span>
+            Bought at: <span>{stock.boughtPrice}</span>
           </h3>
         </div>
       </div>
       <h3 className="justify-self-center text-lg">{stock.units}</h3>
       <h3 className="justify-self-center text-lg">
-        {stock.units * stock.boughtAt}
+        {stock.units * stock.boughtPrice}
       </h3>
-      <h3 className="justify-self-center text-lg">{stock.currentPrice}</h3>
+      <h3 className="justify-self-center text-lg">{stock.price}</h3>
       <h3 className="justify-self-center text-lg">
-        {stock.currentPrice - stock.units * stock.boughtAt}
+        {(stock.price - stock.units * stock.boughtPrice).toFixed(2)}
       </h3>
     </div>
   ))
