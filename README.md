@@ -22,7 +22,7 @@ MERN
 
 ## Presentation
 
-To be attached here
+[PDF Link](https://drive.google.com/file/d/1RprG_ssfWg1tG266YrioPSCM_tViG4DC/view?usp=sharing)
 
 ## Team Details
 
