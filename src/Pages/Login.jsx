@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import {useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 import Navbar from "../component/Home/Navbar"
 
 const Login = () => {
   let navigate = useNavigate()
-  // const host = "http://localhost:5000"
+  const host = "http://localhost:5000"
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const handleSubmit = async (e) => {
     console.log("Clicked")
-    e.preventDefault();  
-    // const response = await fetch(`${host}/api/auth/login`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({email: credentials.email , password: credentials.password }),
-    // });
-    // const json = await response.json()
-    // console.log(json)
-    // if(json.success){
-    // if(true){
-      //redirect
-      // localStorage.setItem('token',json.authToken)
-      navigate("/overview")
-    // }else{
-    //   alert("Invalid Type")
-    // }
+    e.preventDefault();
+    const response = await fetch(`${host}/api/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({email: credentials.email , password: credentials.password }),
+    });
+    const json = await response.json()
+    console.log(json)
+    if(json.success){
+    if(true){
+    // redirect
+    localStorage.setItem('token',json.authToken)
+    navigate("/overview")
+    }else{
+      alert("Invalid Type")
+    }
   }
 
   const onChange = (e) => {
@@ -63,7 +63,8 @@ const Login = () => {
                             placeholder="Username"
                             name="email"
                             value={credentials.email}
-            onChange={onChange}
+                            onChange={onChange}
+                            required
                           />
                         </div>
                         <div className="mb-4">
@@ -74,7 +75,8 @@ const Login = () => {
                             placeholder="Password"
                             name="password"
                             value={credentials.password}
-            onChange={onChange}
+                            onChange={onChange}
+                            required
                           />
                         </div>
                         <div className="mb-12 pt-1 pb-1 text-center">
@@ -100,7 +102,7 @@ const Login = () => {
                               data-mdb-ripple-color="light"
                             >
                               Sign Up
-                            </button> 
+                            </button>
                           </Link>
                         </div>
                       </form>
@@ -128,6 +130,7 @@ const Login = () => {
       </section>
     </>
   )
+}
 }
 
 export default Login

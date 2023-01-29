@@ -62,6 +62,7 @@ const SignUp = () => {
                             onChange={onChange}
                             placeholder="Name"
                             minLength={5}
+                            required
                           />
                         </div>
                         <div className="mb-4">
@@ -73,6 +74,7 @@ const SignUp = () => {
                             value={credentials.email}
                             onChange={onChange}
                             placeholder="Email"
+                            required
                           />
                         </div>
                         <div className="mb-4">
@@ -85,6 +87,7 @@ const SignUp = () => {
                             onChange={onChange}
                             placeholder="Password"
                             minLength={5}
+                            required
                           />
                         </div>
                         <div className="mb-4">
@@ -97,6 +100,7 @@ const SignUp = () => {
                             onChange={onChange}
                             placeholder="Confirm Password"
                             minLength={5}
+                            required
                           />
                         </div>
                         <div className="mb-12 pt-1 pb-1 text-center">
